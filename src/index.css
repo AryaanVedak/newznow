@@ -10,6 +10,7 @@ body {
   font-size: 2em;
   margin-top: 10px;
   margin-bottom: 0;
+  font-weight: bold;
 }
 
 .container {
@@ -19,4 +20,22 @@ body {
 
 .news {
   display: flex;
+}
+
+.about {
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+}
+
+.readmore {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.but-link {
+  text-decoration: none;
 }

@@ -3,6 +3,10 @@ import { Menu } from 'antd';
 import { useState } from 'react';
 const items = [
   {
+    label: 'NewzNow',
+    key: 'main',
+  },
+  {
     label: 'Home',
     key: 'mail',
   },
@@ -46,7 +50,7 @@ const items = [
   },
   {
     label: (
-      <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
+      <a href="https://ant.design" target="_blank" rel="noopener noreferrer" className='about'>
         About Us
       </a>
     ),
