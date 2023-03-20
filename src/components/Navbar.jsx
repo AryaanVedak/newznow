@@ -3,30 +3,27 @@ import { Menu } from 'antd';
 import { useState } from 'react';
 const items = [
   {
-    label: 'Navigation One',
+    label: 'Home',
     key: 'mail',
-    icon: <MailOutlined />,
   },
   {
-    label: 'Navigation Two',
+    label: 'Latest News',
     key: 'app',
-    icon: <AppstoreOutlined />,
   },
   {
-    label: 'Navigation Three - Submenu',
+    label: 'Genre',
     key: 'SubMenu',
-    icon: <SettingOutlined />,
     children: [
       {
         type: 'group',
-        label: 'Item 1',
+        label: 'Sports',
         children: [
           {
-            label: 'Option 1',
+            label: 'Cricket',
             key: 'setting:1',
           },
           {
-            label: 'Option 2',
+            label: 'Football',
             key: 'setting:2',
           },
         ],
@@ -50,7 +47,7 @@ const items = [
   {
     label: (
       <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-        Navigation Four - Link
+        About Us
       </a>
     ),
     key: 'alipay',
