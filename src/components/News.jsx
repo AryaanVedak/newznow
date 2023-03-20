@@ -22,7 +22,6 @@ export class News extends Component {
   }
 
   render() {
-
     return (
       <div className="container my-3">
             <h2 style={{fontWeight: "bold"}}>Top Headlines</h2>
