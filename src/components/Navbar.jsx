@@ -3,10 +3,6 @@ import { Menu } from 'antd';
 import { useState } from 'react';
 const items = [
   {
-    label: 'NewzNow',
-    key: 'main',
-  },
-  {
     label: 'Home',
     key: 'mail',
   },

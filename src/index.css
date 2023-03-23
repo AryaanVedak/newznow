@@ -39,3 +39,13 @@ body {
 .but-link {
   text-decoration: none;
 }
+
+.next-but {
+  align-self: center;
+  margin-left: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+}
