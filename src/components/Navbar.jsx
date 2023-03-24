@@ -1,63 +1,60 @@
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import {Link} from "react-router-dom";
 import { Menu } from 'antd';
 import { useState } from 'react';
 const items = [
   {
-    label: 'Home',
-    key: 'mail',
-  },
-  {
-    label: 'Latest News',
-    key: 'app',
-  },
-  {
-    label: 'Genre',
-    key: 'SubMenu',
-    children: [
-      {
-        type: 'group',
-        label: 'Sports',
-        children: [
-          {
-            label: 'Cricket',
-            key: 'setting:1',
-          },
-          {
-            label: 'Football',
-            key: 'setting:2',
-          },
-        ],
-      },
-      {
-        type: 'group',
-        label: 'Item 2',
-        children: [
-          {
-            label: 'Option 3',
-            key: 'setting:3',
-          },
-          {
-            label: 'Option 4',
-            key: 'setting:4',
-          },
-        ],
-      },
-    ],
+    label: (
+      <Link to="/general" className='about'>
+        General
+      </Link>
+    ),
+    key: 'general',
   },
   {
     label: (
-      <a href="https://ant.design" target="_blank" rel="noopener noreferrer" className='about'>
-        About Us
-      </a>
+      <Link to="/entertainment" className='about'>
+        Entertainment
+      </Link>
     ),
-    key: 'alipay',
+    key: 'entertainment',
+  },
+  {
+    label: (
+      <Link to="/health" className='about'>
+        Health
+      </Link>
+    ),
+    key: 'health',
+  },
+  {
+    label: (
+      <Link to="/science" className='about'>
+        Science
+      </Link>
+    ),
+    key: 'science',
+  },
+  {
+    label: (
+      <Link to="/sports" className='about'>
+        Sports
+      </Link>
+    ),
+    key: 'sports',
+  },
+  {
+    label: (
+      <Link to="/technology" className='about'>
+        Technology
+      </Link>
+    ),
+    key: 'technology',
   },
 ];
 
 const Nav = () => {
 
-  
-  const [current, setCurrent] = useState('mail');
+  const [current, setCurrent] = useState('general');
   const onClick = (e) => {
     console.log('click ', e);
     setCurrent(e.key);

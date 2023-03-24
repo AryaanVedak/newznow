@@ -49,3 +49,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+.spin-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}

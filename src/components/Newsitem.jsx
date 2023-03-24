@@ -10,7 +10,6 @@ const NewsItem = ({title, description,imageUrl,newsUrl}) => (
       className="card"
       hoverable
       style={{
-        width: 240,
         height: 370,
         overflow: "hidden",
         marginBottom: 20,
@@ -19,9 +18,9 @@ const NewsItem = ({title, description,imageUrl,newsUrl}) => (
         <img
           alt="example"
           src={imageUrl}
+          style={{height: 140}}
         />
       }
-      // onClick={() => openInNewTab(newsUrl)}
     >
       <Meta title={title} description={description} />
       <Button 
