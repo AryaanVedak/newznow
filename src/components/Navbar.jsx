@@ -2,14 +2,14 @@ import {Link} from "react-router-dom";
 import { Menu } from 'antd';
 import { useState } from 'react';
 const items = [
-  {
-    label: (
-      <Link to="/general" className='about'>
-        General
-      </Link>
-    ),
-    key: 'general',
-  },
+  // {
+  //   label: (
+  //     <Link to="/general" className='about'>
+  //       General
+  //     </Link>
+  //   ),
+  //   key: 'general',
+  // },
   {
     label: (
       <Link to="/entertainment" className='about'>
@@ -54,11 +54,13 @@ const items = [
 
 const Nav = () => {
 
-  const [current, setCurrent] = useState('general');
+  const [current, setCurrent] = useState('sports');
+
   const onClick = (e) => {
     console.log('click ', e);
     setCurrent(e.key);
   };
+  
   return (
     <div>
       <div className='title-container'>
