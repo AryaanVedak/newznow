@@ -28,31 +28,22 @@ const News = ({pageSize,country,category}) => {
   },[])
   
 
-  const handleNext = async () => {
+  const handleNext = async (prevNext) => {
     if (page + 1 > Math.ceil(totalResults / pageSize)) {
+      return
     }
-    else {
-      let url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=adf92ae1b5b7445a98a8665d84536d24&page=${page + 1}&pageSize=${pageSize}`
-      setLoading(true)
-      let data = await fetch(url)
-      let parsedData = await data.json()
-      setPage(page + 1)
-      setArticles(parsedData.articles)
-      setLoading(false)
-      console.log("Next")
-    }
-  }
 
-  const handlePrev = async () => {
-    let url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=adf92ae1b5b7445a98a8665d84536d24&page=${page - 1}&pageSize=${pageSize}`
+    const currentPage = prevNext === 'PREV' ? page - 1 : page + 1
+    let url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=adf92ae1b5b7445a98a8665d84536d24&page=${currentPage}&pageSize=${pageSize}`
     setLoading(true)
     let data = await fetch(url)
     let parsedData = await data.json()
-    setPage(page - 1)
+    setPage(currentPage)
     setArticles(parsedData.articles)
     setLoading(false)
-    console.log("Previous")
+    console.log("Next")
   }
+
     return (
       <div className="container my-3">
         <h2 style={{ fontWeight: "bold" }}>Top Headlines</h2>
@@ -74,8 +65,8 @@ const News = ({pageSize,country,category}) => {
           })}
         </div>
         <div className="pagination">
-          <Button size="large" disabled={page <= 1} onClick={handlePrev}>&larr; Previous</Button>
-          <Button disabled={page + 1 > Math.ceil(totalResults / pageSize)} className="next-but" size="large" onClick={handleNext}>Next &rarr;</Button>
+          <Button size="large" disabled={page <= 1} onClick={() => handleNext('PREV')}>&larr; Previous</Button>
+          <Button disabled={page + 1 > Math.ceil(totalResults / pageSize)} className="next-but" size="large" onClick={() => handleNext('NEXT')}>Next &rarr;</Button>
         </div>
 
       </div>
