@@ -2,14 +2,6 @@ import {Link} from "react-router-dom";
 import { Menu } from 'antd';
 import { useState } from 'react';
 const items = [
-  // {
-  //   label: (
-  //     <Link to="/general" className='about'>
-  //       General
-  //     </Link>
-  //   ),
-  //   key: 'general',
-  // },
   {
     label: (
       <Link to="/entertainment" className='about'>

@@ -27,7 +27,6 @@ const News = ({pageSize,country,category}) => {
     updateData();
   },[])
   
-
   const handleNext = async (prevNext) => {
     if (page + 1 > Math.ceil(totalResults / pageSize)) {
       return

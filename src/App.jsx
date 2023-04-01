@@ -14,15 +14,6 @@ const App = () => {
     <div>
       <Navbar/>
         <Routes>
-          {/* <Route path="/" element={
-            <News
-              pageSize = {8}
-              country = "in"
-              category = "general"
-              key = "general"
-            />
-          }/> */}
-
           <Route path="/entertainment" element={
             <News
               pageSize = {8}
